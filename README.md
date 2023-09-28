@@ -71,3 +71,18 @@ npm start
 ```
 Open ur browser on localhost:3000 if not redirected automatically
 
+## Evaluation
+If u want please login as a guest with email: guest@gmail.com and password: 12345678 ,
+or feel free to make a new account . To talk to someone find them in the search bar and 
+chat with them . 
+There are few pre-defined users and groups.To chat with them login as a guest with below credentials 
+Email : guest@gmail.com 
+Password: 12345678
+
+-- Predefined Users : guest,satyam,Akio , Hinata ,Ayush ,Asahi ,kamal { You can search any of them to talk}
+-- Predefined Groups : Avengers, Ravagers
+
+These Users and group will only be visible for guest in starting. If you login from your own made account , Find them in search bar first.
+
+## THANK YOU
+## ARIGATO
