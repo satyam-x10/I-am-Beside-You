@@ -91,13 +91,13 @@ const MyChats = ({ fetchAgain, onOpenHandler }) => {
           d="flex"
           flexDir="column"
           p={3}
-          
+
           w="100%"
           h="100%"
           borderRadius="lg"
           overflowY="hidden"
           bg="#374e5b"
-          
+
         >
           {chats ? (
             <Stack overflowY="scroll">
@@ -123,15 +123,18 @@ const MyChats = ({ fetchAgain, onOpenHandler }) => {
             <ChatLoading />
           )}
         </Box>
-        <Tooltip label="Chat with Ai bot!" hasArrow placement="bottom-end">
+        <Box><Tooltip label="Chat with Ai bot!" hasArrow placement="bottom-end">
           <Button variant="ghost" bg='#319795' onClick={onOpenHandler} color="white"
             _hover={{ color: "yellow.400" }} _active={{ color: "yellow.400" }}>
             <AtSignIcon />
+            
             <Text d={{ base: "none", md: "flex" }} px={4} fontWeight="bold">
               Talk to Ai
             </Text>
           </Button>
         </Tooltip>
+        </Box>
+
       </Box>
     </>
   );

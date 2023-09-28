@@ -1,7 +1,8 @@
-import React, { useState, useRef, useEffect } from "react"; // Import useRef and useEffect
+import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import axios from "axios";
 import bothi from "./bothi.gif";
+
 const AiChat = () => {
   const [message, setMessage] = useState("");
   const [chatMessages, setChatMessages] = useState([
@@ -11,14 +12,13 @@ const AiChat = () => {
     },
   ]);
   const [, setChatbotResponse] = useState("");
+  const [chatVisible, setChatVisible] = useState(true); // Track chat visibility
 
   const apiKey = "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";
 
-  // Move the useRef inside the component
   const chatMessagesRef = useRef();
 
   useEffect(() => {
-    // Scroll the chat messages container to the bottom
     if (chatMessagesRef.current) {
       chatMessagesRef.current.scrollTop = chatMessagesRef.current.scrollHeight;
     }
@@ -34,9 +34,8 @@ const AiChat = () => {
       },
     ]);
     setMessage("");
-  
+
     try {
-      // Use axios library to make a POST request to the OpenAI API
       const response = await axios.post(
         "https://api.openai.com/v1/completions",
         {
@@ -55,9 +54,9 @@ const AiChat = () => {
           },
         }
       );
-  
+
       const chatbotResponse = response.data.choices[0].text;
-  
+
       setChatbotResponse(chatbotResponse);
       setChatMessages((prev) => [
         ...prev,
@@ -67,53 +66,52 @@ const AiChat = () => {
         },
       ]);
     } catch (error) {
-      // Handle any errors that occur during the API request
       console.error("Error sending message to the AI bot:", error);
     }
   };
-  
 
   const handleInput = (e) => {
     setMessage(e.target.value);
   };
 
-
+  // Function to handle "Go back" button click
+  const handleGoBack = () => {
+    setChatVisible(false); // Hide the chat modal
+  };
 
   return (
     <ModalContent>
-      <div id="chat-window" >
-        
-        <div className="main-title">ASK ME ANYTHING !!</div>
-        <img h="50px" src={bothi}  alt="" />
-        <div id="chat-messages" ref={chatMessagesRef}>
-          {chatMessages.map((Message) => (
-            <div className={`message ${Message.role}`}>
-              {/* <img
-                src={require(`../assets/${Message.role}.png`)}
-                alt={`${Message.role}`}
-                srcSet=""
-              /> */}
-              <span className="msgchat">{Message.message}</span>
-            </div>
-          ))}
+      {chatVisible && (
+        <div id="chat-window">
+          <div><button id="goback" onClick={handleGoBack}>Go back</button>
+            <div className="main-title">ASK ME ANYTHING !!</div>
+            <img src={bothi} alt="" />
+          </div>
+
+          <div id="chat-messages" ref={chatMessagesRef}>
+            {chatMessages.map((Message) => (
+              <div className={`message ${Message.role}`} key={Math.random()}>
+                <span className="msgchat">{Message.message}</span>
+              </div>
+            ))}
+          </div>
+          <form id="chat-form" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              id="chat-input"
+              autoComplete="off"
+              placeholder="Type your message here"
+              required
+              value={message}
+              onChange={handleInput}
+            />
+            <button type="submit">Send</button>
+          </form>
         </div>
-        <form id="chat-form" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            id="chat-input"
-            autoComplete="off"
-            placeholder="Type your message here"
-            required
-            value={message}
-            onChange={handleInput}
-          />
-          <button type="submit">Send</button>
-        </form>
-      </div>
+      )}
     </ModalContent>
   );
 };
-
 // The rest of your styled components...
 
 const ModalContent = styled.div`
@@ -131,8 +129,9 @@ const ModalContent = styled.div`
 
   #chat-window {
    
-    width: 75vw;
-    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    margin: auto 0 0 10%;
     background: #319795;
     padding: 20px;
     border: 0.31rem solid black;
@@ -143,9 +142,15 @@ const ModalContent = styled.div`
       height: 100px;
       position: absolute;
       top: 10%;
-      right: 10%;
+      right: 0%;
       
     }
+  }
+  #goback{
+    padding: 10px 20px;
+    background-color: #182126;
+    color: white;
+    border-radius: 10px;
   }
   .msgchat {
     margin: auto 10px;
