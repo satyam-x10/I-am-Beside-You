@@ -12,7 +12,7 @@ const AiChat = ({setOnOpen}) => {
     },
   ]);
   const [, setChatbotResponse] = useState("");
-  const [chatVisible, setChatVisible] = useState(true); // Track chat visibility
+  const [chatVisible] = useState(true); // Track chat visibility
 
   const apiKey = "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";
 
