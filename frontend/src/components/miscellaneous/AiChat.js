@@ -10,7 +10,7 @@ const AiChat = () => {
       role: "bot-message",
     },
   ]);
-  const [chatbotResponse, setChatbotResponse] = useState("");
+  const [, setChatbotResponse] = useState("");
 
   const apiKey = "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";
 
