@@ -133,7 +133,7 @@ const ModalContent = styled.div`
     height: 100vh;
     margin: auto 0 0 10%;
     background: #319795;
-    padding: 20px;
+    padding: 40px;
     border: 0.31rem solid black;
     border-radius: 10px;
     margin-top: 50px;
@@ -147,6 +147,7 @@ const ModalContent = styled.div`
     }
   }
   #goback{
+  
     padding: 10px 20px;
     background-color: #182126;
     color: white;
@@ -249,11 +250,7 @@ const ModalContent = styled.div`
     border-radius: 50%;
     margin: 5px;
   }
-  @media only screen and (min-device-width: 320px) and (max-device-width: 400px) {
-    #chat-window {
-      width: 90%;
-    }
-  }
+  
   .main-title {
     font-size: 1.5rem;
     text-align: center;
