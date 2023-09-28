@@ -100,7 +100,7 @@ const AiChat = ({setOnOpen}) => {
               type="text"
               id="chat-input"
               autoComplete="off"
-              placeholder="Type your message here"
+              placeholder="Type your message "
               required
               value={message}
               onChange={handleInput}
@@ -132,7 +132,7 @@ const ModalContent = styled.div`
     height: 100vh;
     margin: auto 0 0 10%;
     background: #319795;
-    padding: 40px;
+    padding: 40px 0px;
     border: 0.31rem solid black;
     border-radius: 10px;
     margin-top: 50px;
@@ -146,7 +146,7 @@ const ModalContent = styled.div`
     }
   }
   #goback{
-  
+  margin :0 20px;
     padding: 10px 20px;
     background-color: #182126;
     color: white;
@@ -183,14 +183,14 @@ const ModalContent = styled.div`
   #chat-input {
     
     flex-grow: 1;
-    padding: 10px;
+    padding: 10px 0;
     margin-right: 10px;
     border-radius: 10px;
     border: 1px solid #ccc;
   }
 
   button[type="submit"] {
-    padding: 10px 20px;
+    padding: 10px ;
     border-radius: 10px;
     background-color: #f7efe5;
     color: #674188;
