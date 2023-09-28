@@ -14,7 +14,7 @@ const AiChat = ({setOnOpen}) => {
   const [, setChatbotResponse] = useState("");
   const [chatVisible] = useState(true); // Track chat visibility
 
-  const apiKey = "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";
+  const apiKey = process.env.apiKey;
 
   const chatMessagesRef = useRef();
 
@@ -183,7 +183,7 @@ const ModalContent = styled.div`
   #chat-input {
     
     flex-grow: 1;
-    padding: 10px 0;
+    padding: 10px 10px;
     margin-right: 10px;
     border-radius: 10px;
     border: 1px solid #ccc;
