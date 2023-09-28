@@ -22,6 +22,12 @@
   <img src="https://img.shields.io/badge/Developer-Satyam_Kumar-blueviolet?style=for-the-badge&logo=appveyor">
 </p><br>
 
+## Introduction 
+- Satyam Kumar 
+- IIT Bhubaneswar
+- B.Tech in Metallurgical and Materials Engineering
+- 21mm01002@iitbbs.ac.in 
+
 ##  Experience the I'm Beside You Messaging Service Prototype
 
 ## Deployment
