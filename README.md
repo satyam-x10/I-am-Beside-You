@@ -18,16 +18,20 @@
   <img src="https://img.shields.io/badge/Developer-Satyam_Kumar-blueviolet?style=for-the-badge&logo=appveyor">
 </p><br>
 
-### - Experience the I'm Beside You Messaging Service Prototype
+##  Experience the I'm Beside You Messaging Service Prototype
 
 ## About The Project
-The ultimate platform for personal and group chats with friends, plus the power to engage in enlightening conversations with AI. Seamlessly switch between private or group chats, and unlock endless AI capabilities, from answering questions to assisting with tasks. Enjoy a user-friendly interface prioritizing your privacy and security
+The ultimate platform for personal and group chats with friends, plus the power to engage in enlightening conversations with AI. Seamlessly switch between private or group chats, and unlock endless AI capabilities, from answering questions to assisting with tasks. Enjoy a user-friendly interface prioritizing your privacy and security .
+
 
 
 ### <b>User Functionalities:</b>
 <ul>
+  <li><b>Authentication </b> Encrypted user details and Authorisation using JWT</li>
   <li><b>Registration and Login:</b> Users can create an account and log in to the application using their email.</li>
   <li><b>P2P Chat </b> Chat to any user availaible on the website</li>
+  <li><b>Group Chat </b> Group Chat Functionalities availaible </li>
+  <li><b>AI Chat </b>Talk with Your AI Buddy .</li>
   <li><b>Real-Time conversation:</b> Messages transfer smoothly in realtime , so no waiting</li>
 
 </ul>
@@ -37,10 +41,10 @@ The ultimate platform for personal and group chats with friends, plus the power 
 We deployed the application on Render, You can check it by clicking this link 
 
 https://i-am-beside-you.onrender.com/
-First, install the dependecies :
 
 
 To Run on Your local Computer
+
  ## Install the Dependencies
 ```bash
 npm install
@@ -55,5 +59,5 @@ npm start
 cd frontend
 npm start
 ```
- ## Open ur browser on localhost:3000 if not redirected automatically
+Open ur browser on localhost:3000 if not redirected automatically
 
