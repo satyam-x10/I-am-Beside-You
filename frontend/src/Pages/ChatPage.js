@@ -14,14 +14,14 @@ const ChatPage = () => {
   /*  const navigate = useNavigate();
   const isRefreshingRef = useIsRefreshingRef() */
   const onOpenHandler = () => {
-    setOnOpen(!onOpen);
+    setOnOpen(true);
   }
   //navigate('/chats');
 
   return (
     <React.Fragment>
       {onOpen && 
-        <AiChat />
+        <AiChat setOnOpen = {setOnOpen} />
       }
       <div style={{ width: "100%" }}>
       

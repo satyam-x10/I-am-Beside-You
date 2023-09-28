@@ -123,7 +123,7 @@ const MyChats = ({ fetchAgain, onOpenHandler }) => {
             <ChatLoading />
           )}
         </Box>
-        <Box><Tooltip label="Chat with Ai bot!" hasArrow placement="bottom-end">
+        <Box>
           <Button variant="ghost" bg='#319795' onClick={onOpenHandler} color="white"
             _hover={{ color: "yellow.400" }} _active={{ color: "yellow.400" }}>
             <AtSignIcon />
@@ -132,7 +132,6 @@ const MyChats = ({ fetchAgain, onOpenHandler }) => {
               Talk to Ai
             </Text>
           </Button>
-        </Tooltip>
         </Box>
 
       </Box>

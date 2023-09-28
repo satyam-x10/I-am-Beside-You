@@ -3,7 +3,7 @@ import styled from "styled-components";
 import axios from "axios";
 import bothi from "./bothi.gif";
 
-const AiChat = () => {
+const AiChat = ({setOnOpen}) => {
   const [message, setMessage] = useState("");
   const [chatMessages, setChatMessages] = useState([
     {
@@ -76,7 +76,7 @@ const AiChat = () => {
 
   // Function to handle "Go back" button click
   const handleGoBack = () => {
-    setChatVisible(false); // Hide the chat modal
+    setOnOpen(false) // Hide the chat modal
   };
 
   return (
@@ -128,7 +128,6 @@ const ModalContent = styled.div`
   background-color: transparent;
 
   #chat-window {
-   
     width: 100vw;
     height: 100vh;
     margin: auto 0 0 10%;
@@ -176,11 +175,13 @@ const ModalContent = styled.div`
   }
 
   #chat-form {
+    padding: 0 10%;
     display: flex;
     align-items: center;
   }
 
   #chat-input {
+    
     flex-grow: 1;
     padding: 10px;
     margin-right: 10px;
