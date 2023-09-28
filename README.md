@@ -45,9 +45,11 @@ The ultimate platform for personal and group chats with friends, plus the power 
   <li><b>Authentication </b> Encrypted user details and Authorisation using JWT Library</li>
   <li><b>Registration and Login:</b> Users can create an account and log in to the application using their email.</li>
   <li><b>P2P Chat </b> Chat to any user availaible on the website</li>
+  <li><b>Notification </b> Get Notification for missed messages</li>
+  <li><b>Typing Status </b>Is Typing prompt when someone is typing </li>
   <li><b>Group Chat </b> Group Chat Functionalities availaible </li>
   <li><b>AI Chat </b>Talk with Your AI Buddy .</li>
-  <li><b>Real-Time conversation:</b> Messages transfer smoothly in realtime , so no waiting</li>
+  <li><b>Real-Time conversation:</b> Messages transfers smoothly in realtime , so no waiting</li>
 
 </ul>
 
