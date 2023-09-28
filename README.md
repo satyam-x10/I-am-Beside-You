@@ -42,7 +42,7 @@ The ultimate platform for personal and group chats with friends, plus the power 
 
 ### <b>User Functionalities:</b>
 <ul>
-  <li><b>Authentication </b> Encrypted user details and Authorisation using JWT</li>
+  <li><b>Authentication </b> Encrypted user details and Authorisation using JWT Library</li>
   <li><b>Registration and Login:</b> Users can create an account and log in to the application using their email.</li>
   <li><b>P2P Chat </b> Chat to any user availaible on the website</li>
   <li><b>Group Chat </b> Group Chat Functionalities availaible </li>
