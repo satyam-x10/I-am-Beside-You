@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
 import axios from "axios";
 import bothi from "./bothi.gif";
+// import { dot } from "node:test/reporters";
 
 const AiChat = ({setOnOpen}) => {
   const [message, setMessage] = useState("");
@@ -13,9 +14,9 @@ const AiChat = ({setOnOpen}) => {
   ]);
   const [, setChatbotResponse] = useState("");
   const [chatVisible] = useState(true); // Track chat visibility
-
-  const apiKey = process.env.apiKey;
-
+ 
+  const apiKey = process.env.REACT_APP_apikey;
+console.log("API KEY: ",apiKey);
   const chatMessagesRef = useRef();
 
   useEffect(() => {

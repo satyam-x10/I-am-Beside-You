@@ -5,14 +5,13 @@
   "scripts": {
     "start": "node backend/server.js ",
     "server": "nodemon backend/server.js ",
-    "build" : "npm install --legacy-peer-deps && npm install --legacy-peer-deps --prefix frontend && npm run build --prefix frontend"
-    
+    "build": "npm install --legacy-peer-deps && npm install --legacy-peer-deps --prefix frontend && npm run build --prefix frontend"
   },
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
-    "dotenv": "^14.2.0",
+    "dotenv": "^14.3.2",
     "express": "^4.17.2",
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
@@ -24,7 +23,6 @@
     "socket.io": "^4.4.1",
     "util": "^0.12.4"
   },
-  "devDependencies": {},
   "author": "satyam",
   "description": ""
 }
