@@ -36,7 +36,7 @@ The ultimate platform for personal and group chats with friends, plus the power 
 ## Deployment
 We deployed the application on Render, You can check it by clicking this link 
 
-(https://i-am-beside-you.onrender.com/) 
+https://i-am-beside-you.onrender.com/
 First, install the dependecies :
 
 
@@ -44,11 +44,16 @@ To Run on Your local Computer
  ## Install the Dependencies
 ```bash
 npm install
+```
+ ## Run the Backend
+```bash
+npm start
+```
 
-
-
-
-
-
-
+ ## Run the Frontend
+```bash
+cd frontend
+npm start
+```
+ ## Open ur browser on localhost:3000 if not redirected automatically
 
