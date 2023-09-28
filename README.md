@@ -1,3 +1,7 @@
+
+
+
+
 <H1 align="center"><IMG SRC="https://capsule-render.vercel.app/api?type=rect&color=gradient&height=100&section=footer&text=I+m+Beside+You&fontSize=50"></H1>
 <p align="center">
   <br>
@@ -20,6 +24,11 @@
 
 ##  Experience the I'm Beside You Messaging Service Prototype
 
+## Deployment
+We deployed the application on Render, You can check it by clicking this link 
+
+https://i-am-beside-you.onrender.com/
+
 ## About The Project
 The ultimate platform for personal and group chats with friends, plus the power to engage in enlightening conversations with AI. Seamlessly switch between private or group chats, and unlock endless AI capabilities, from answering questions to assisting with tasks. Enjoy a user-friendly interface prioritizing your privacy and security .
 
@@ -37,13 +46,8 @@ The ultimate platform for personal and group chats with friends, plus the power 
 </ul>
 
 
-## Deployment
-We deployed the application on Render, You can check it by clicking this link 
 
-https://i-am-beside-you.onrender.com/
-
-
-To Run on Your local Computer
+## To Run on Your local Computer
 
  ## Install the Dependencies
 ```bash
