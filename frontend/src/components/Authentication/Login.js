@@ -77,7 +77,7 @@ const Login = () => {
            
           value={email}
           type="email"
-          placeholder="Enter Your Email Address"
+          placeholder=" Enter Email : guest@gmail.com"
           onChange={(e) => setEmail(e.target.value)}
         />
       </FormControl>
@@ -88,7 +88,7 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             type={show ? "text" : "password"}
-            placeholder="Enter password"
+            placeholder="Enter password :12345678"
           />
           <InputRightElement width="4.5rem">
             <Button
