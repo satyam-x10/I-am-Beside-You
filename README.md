@@ -86,5 +86,7 @@ Password: 12345678
 
 These Users and group will only be visible for guest in starting. If you login from your own made account , Find them in search bar first.
 
+To chat with AI , Click on the the { @Talk To Ai } Button below all contacts name.
+
 ## THANK YOU
 ## ARIGATO
