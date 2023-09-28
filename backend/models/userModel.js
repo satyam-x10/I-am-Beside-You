@@ -15,7 +15,7 @@ const userSchema = mongoose.Schema(
   { timestaps: true }
 );
 
-//instance method //available on all docs created out of certain collection
+
 userSchema.methods.matchPassword = async function (enteredPassword) {
   return await bcrypt.compare(enteredPassword, this.password);
 };

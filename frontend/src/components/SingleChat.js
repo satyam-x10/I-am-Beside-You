@@ -281,6 +281,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
             <h1 style={{ color: 'wheat',margin:'20px 0px'  }}>Kon'nichiwa, <span >{user.name}</span></h1>
             <hr ></hr>
             <h4 mt={3}>Anata ga genkidearu koto o negatte imasu :)</h4>
+            <h4 mt={3}>I hope You are doing well .</h4>
             <hr ></hr>
             <h4 mt={3} style={{ color: 'wheat',margin:'20px 0px'  }}>Please Select a chat</h4>
            
