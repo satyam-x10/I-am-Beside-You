@@ -30,7 +30,7 @@ import UserListItem from "../userAvatar/UserListItem";
 import NotificationBadge from "react-notification-badge";
 import { Effect } from "react-notification-badge";
 import { getSender } from "../../config/ChatLogics";
-
+import logo from "./logo.png";
 
 const SideDrawer = () => {
   const [search, setSearch] = useState("");
@@ -50,7 +50,7 @@ const SideDrawer = () => {
     navigate("/");
   };
 
-  const handleSearch = async() => {
+  const handleSearch = async () => {
 
     if (!search) {
       toast({
@@ -67,7 +67,7 @@ const SideDrawer = () => {
       setLoading(true);
 
       const config = {
-        headers: { Authorization: `Bearer ${user.token}`}
+        headers: { Authorization: `Bearer ${user.token}` }
       };
 
       const { data } = await axios.get(`/api/user?search=${search}`, config);
@@ -91,7 +91,7 @@ const SideDrawer = () => {
   };
 
 
-  
+
 
   const accessChatCreateChat = async (userId) => {
     //console.log(userId); id of selected user
@@ -106,7 +106,7 @@ const SideDrawer = () => {
       };
       const { data } = await axios.post(`/api/chat`, { userId }, config);
 
-      if (!chats.find((chat) => chat._id === data._id)) setChats([data, ...chats]); 
+      if (!chats.find((chat) => chat._id === data._id)) setChats([data, ...chats]);
       //already existing check clause //newly created chat above the rest
 
       setSelectedChat(data);
@@ -137,24 +137,25 @@ const SideDrawer = () => {
         alignItems="center"
         w="100%"
         p="5px 10px 5px 10px"
-       
-       
+
+
         bg="#182126"
         color="black"
       >
         <Tooltip label="Search Users to chat" hasArrow placement="bottom-end">
-          <Button variant="ghost" bg ='#319795' onClick={onOpen} color="white"
-            _hover={{ color:"yellow.400" }} _active={{  color:"yellow.400" }}>
-              <i className="fas fa-search"></i>
-              <Text d={{ base: "none", md: "flex" }} px={4} fontWeight="bold">
-                Search User
-              </Text>
+          <Button variant="ghost" bg='#319795' onClick={onOpen} color="white"
+            _hover={{ color: "yellow.400" }} _active={{ color: "yellow.400" }}>
+            <i className="fas fa-search"></i>
+            <Text d={{ base: "none", md: "flex" }} px={4} fontWeight="bold">
+              Search User
+            </Text>
           </Button>
         </Tooltip>
-        
 
-        <Text fontSize="3xl" fontFamily="Work sans bold" fontWeight='bold' color="white" >
-          I'M B U
+
+
+        <Text fontSize="3xl" fontFamily="Work sans bold" p={1} fontWeight='bold' color="white" bg="wheat" >
+          <img src={logo} alt="logo" width="250" height="50" />
         </Text>
 
         <div>
@@ -164,12 +165,12 @@ const SideDrawer = () => {
                 count={notification.length}
                 effect={Effect.SCALE}
               />
-              <BellIcon fontSize="2xl" m={1} color="#319795"/>
+              <BellIcon fontSize="2xl" m={1} color="#319795" />
             </MenuButton>
             <MenuList pl={2}>
               {!notification.length && "No New Messages"}
               {notification.map((notif) => (
-                <MenuItem 
+                <MenuItem
                   key={notif._id}
                   onClick={() => {
                     setSelectedChat(notif.chat);
@@ -184,18 +185,18 @@ const SideDrawer = () => {
             </MenuList>
           </Menu>
           <Menu>
-            <MenuButton as={Button} bg="#319795"  rightIcon={<ChevronDownIcon/>}  
-              _hover={{ color:"yellow.400"}} _active={{ color:"yellow.400"}}>
-              <Avatar size="sm" cursor="pointer" name={user.name}   bg="yellow.400" color="black"/>
+            <MenuButton as={Button} bg="#319795" rightIcon={<ChevronDownIcon />}
+              _hover={{ color: "yellow.400" }} _active={{ color: "yellow.400" }}>
+              <Avatar size="sm" cursor="pointer" name={user.name} bg="yellow.400" color="black" />
             </MenuButton>
-            <MenuList bg = "grey" color="black">
+            <MenuList bg="grey" color="black">
               <ProfileModal user={user}>
-                <MenuItem fontWeight="bold"  _hover={{background: "yellow.400"}} >
+                <MenuItem fontWeight="bold" _hover={{ background: "yellow.400" }} >
                   My Profile
                 </MenuItem>{" "}
               </ProfileModal>
-              <MenuDivider/>
-              <MenuItem fontWeight="bold" color="black" onClick={logoutHandler} _hover={{background: "yellow.400"}}>
+              <MenuDivider />
+              <MenuItem fontWeight="bold" color="black" onClick={logoutHandler} _hover={{ background: "yellow.400" }}>
                 Logout
               </MenuItem>
             </MenuList>
@@ -226,7 +227,7 @@ const SideDrawer = () => {
                   handleFunction={() => accessChatCreateChat(user._id)}
                 />
               ))
-            )} 
+            )}
             {loadingChat && <Spinner ml="auto" d="flex" />}
           </DrawerBody>
         </DrawerContent>
