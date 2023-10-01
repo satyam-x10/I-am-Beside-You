@@ -32,7 +32,7 @@ https://drive.google.com/file/d/1hWMZM265Lge2VOh2rRUEHikXzN3_El1s/view?usp=shari
 
 ## Deployment
 We deployed the application on Render, You can check it by clicking this link 
-
+It might take a minute or two to load for first time . Thanks for waiting .
 https://i-am-beside-you.onrender.com/
 
 ## About The Project
