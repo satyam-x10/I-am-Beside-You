@@ -4,7 +4,7 @@ import axios from "axios";
 import bothi from "./bothi.gif";
 // import { dot } from "node:test/reporters";
 
-const AiChat = ({setOnOpen}) => {
+const AiChat = ({ setOnOpen }) => {
   const [message, setMessage] = useState("");
   const [chatMessages, setChatMessages] = useState([
     {
@@ -14,7 +14,7 @@ const AiChat = ({setOnOpen}) => {
   ]);
   const [, setChatbotResponse] = useState("");
   const [chatVisible] = useState(true); // Track chat visibility
- 
+
   const apiKey = process.env.REACT_APP_apikey;
 
   const chatMessagesRef = useRef();
@@ -24,7 +24,25 @@ const AiChat = ({setOnOpen}) => {
       chatMessagesRef.current.scrollTop = chatMessagesRef.current.scrollHeight;
     }
   }, [chatMessages]);
-
+  const url = 'https://robomatic-ai.p.rapidapi.com/api';
+  const options = {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/x-www-form-urlencoded',
+      'X-RapidAPI-Key': 'cf7f364cb9msh68b5b312a6ccf6ap125288jsn5d2c80e1559f',
+      'X-RapidAPI-Host': 'robomatic-ai.p.rapidapi.com'
+    },
+    body: new URLSearchParams({
+      in: message,
+      op: 'in',
+      cbot: '1',
+      SessionID: 'RapidAPI1',
+      cbid: '1',
+      key: 'RHMN5hnQ4wTYZBGCF3dfxzypt68rVP',
+      ChatSource: 'RapidAPI',
+      duration: '1'
+    })
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     setChatMessages((prev) => [
@@ -37,27 +55,13 @@ const AiChat = ({setOnOpen}) => {
     setMessage("");
 
     try {
-      const response = await axios.post(
-        "https://api.openai.com/v1/completions",
-        {
-          prompt: message,
-          model: "text-davinci-003",
-          temperature: 0,
-          max_tokens: 1000,
-          top_p: 1,
-          frequency_penalty: 0.0,
-          presence_penalty: 0.0,
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${apiKey}`,
-          },
-        }
-      );
+      const response = await fetch(url, options);
 
-      const chatbotResponse = response.data.choices[0].text;
+    const responseData = await response.json(); // Assuming the response is in JSON format
 
+  const chatbotResponse = responseData.out;
+      ;
+      console.log(chatbotResponse);
       setChatbotResponse(chatbotResponse);
       setChatMessages((prev) => [
         ...prev,
