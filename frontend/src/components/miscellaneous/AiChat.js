@@ -16,7 +16,7 @@ const AiChat = ({setOnOpen}) => {
   const [chatVisible] = useState(true); // Track chat visibility
  
   const apiKey = process.env.REACT_APP_apikey;
-console.log("API KEY: ",apiKey);
+
   const chatMessagesRef = useRef();
 
   useEffect(() => {
@@ -68,6 +68,7 @@ console.log("API KEY: ",apiKey);
       ]);
     } catch (error) {
       console.error("Error sending message to the AI bot:", error);
+      alert("Error sending message : SERVER IS BUSY");
     }
   };
 
