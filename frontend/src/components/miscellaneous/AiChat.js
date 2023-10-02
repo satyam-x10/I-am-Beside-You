@@ -29,7 +29,7 @@ const AiChat = ({ setOnOpen }) => {
     method: 'POST',
     headers: {
       'content-type': 'application/x-www-form-urlencoded',
-      'X-RapidAPI-Key': 'cf7f364cb9msh68b5b312a6ccf6ap125288jsn5d2c80e1559f',
+      'X-RapidAPI-Key': apiKey,
       'X-RapidAPI-Host': 'robomatic-ai.p.rapidapi.com'
     },
     body: new URLSearchParams({
